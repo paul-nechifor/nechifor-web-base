@@ -1,0 +1,18 @@
+doctype html
+html(lang='en')
+  head
+    meta(charset='utf-8')
+    block prehead
+    style: :stylus(compress=true)
+      body
+        font-size 1.2em
+        line-height 1.4
+        margin 0 auto
+        max-width 600px
+      a
+        text-decoration none
+        &:hover
+          text-decoration underline
+
+  body
+    block content
