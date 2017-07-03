@@ -5,12 +5,17 @@ const webserver = require('gulp-webserver');
 
 gulp.task('default', ['html', 'webserver', 'watch']);
 
-gulp.task('build', ['html']);
+gulp.task('build', ['static', 'html']);
 
 gulp.task('html', () => {
   return gulp.src('pages/*.pug')
     .pipe(pug({}))
     .pipe(htmlmin({ collapseWhitespace: true }))
+    .pipe(gulp.dest('dist'));
+});
+
+gulp.task('static', () => {
+  return gulp.src('static/**/*')
     .pipe(gulp.dest('dist'));
 });
 
