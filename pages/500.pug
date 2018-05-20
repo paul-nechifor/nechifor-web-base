@@ -2,11 +2,21 @@ extends ../base
 
 block prehead
   title 500: Oh, no! Something went wrong.
+  meta(name='description', content='500: Oh, no! Something went wrong.')
 
 block content
-  :markdown-it(html=true)
-    # 404: Oh, no! Something went wrong. (っ◞‸◟c)
+  .face (っ◞‸◟c)
 
-    Sorry, this page errored.
+  h1 500: Oh, no! Something went wrong
 
-    — [Paul Nechifor](/)
+  p Sorry, this page errored.
+
+  .footer
+    :markdown-it
+      — [Paul Nechifor](/)
+
+    small: :markdown-it
+      [Home](/) •
+      [Blog](/blog) •
+      [Projects](/projects) •
+      [Twitter](https://twitter.com/PaulNechifor)

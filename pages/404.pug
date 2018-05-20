@@ -2,11 +2,19 @@ extends ../base
 
 block prehead
   title 404: Page not found
+  meta(name='description', content='404: Page not found')
 
 block content
-  :markdown-it(html=true)
-    # 404: Page not found. (༎ຶ ෴ ༎ຶ)
+  .face (༎ຶ ෴ ༎ຶ)
+  h1 404: Page not found.
+  p Sorry, this page wasn’t found.
 
-    Sorry, this page wasn’t found.
+  .footer
+    :markdown-it
+      — [Paul Nechifor](/)
 
-    — [Paul Nechifor](/)
+    small: :markdown-it
+      [Home](/) •
+      [Blog](/blog) •
+      [Projects](/projects) •
+      [Twitter](https://twitter.com/PaulNechifor)
